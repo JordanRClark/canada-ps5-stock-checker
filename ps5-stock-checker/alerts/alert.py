@@ -1,5 +1,4 @@
 import discord
-from discord.ext import commands
 import settings
 
 
@@ -35,12 +34,12 @@ class Text:
 
 class Alert(Discord, Email, Text):
     def __init__(self, *args, **kwargs):
-        self.provider = kwargs.pop('provider')
-        self.link = kwargs.pop('link')
+        self.provider = kwargs.pop("provider")
+        self.link = kwargs.pop("link")
         super().__init__()
 
     def create_message(self, provider=None, link=None):
-        return f'Stock available at {provider}, more info here: {link}'
+        return f"Stock available at {provider}, more info here: {link}"
 
     async def alert(self):
         if settings.SEND_DISCORD:
@@ -49,5 +48,3 @@ class Alert(Discord, Email, Text):
             self.alert_email()
         if settings.SEND_TEXT:
             self.alert_text()
-
-

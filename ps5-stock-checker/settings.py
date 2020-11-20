@@ -1,6 +1,6 @@
-'''
+"""
 Main settings for the stock checker.
-'''
+"""
 
 SEND_DISCORD = False
 SEND_EMAIL = False
@@ -14,7 +14,7 @@ CHECK_SHOPPERS = False
 # Number of seconds to sleep before reloading and checking stock
 SLEEP = 20
 
-DISCORD_TOKEN = ''
+DISCORD_TOKEN = ""
 
 DISCORD_SEND_DM = True
 DISCORD_USER = 0

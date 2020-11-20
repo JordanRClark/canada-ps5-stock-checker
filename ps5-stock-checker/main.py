@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
-import asyncio
-import time, threading
-
-import requests
+import threading
 
 import settings
 
 from stores import az, bb, sdm, wm
 
+
 def main():
-    '''
+    """
     Main loop for the program
     We don't want to spam the endpoints are get throttled
-    '''
+    """
     if settings.CHECK_AMAZON:
         az_thread = threading.Thread(target=az.run)
         az_thread.start()
@@ -27,5 +25,5 @@ def main():
         wm_thread.start()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
