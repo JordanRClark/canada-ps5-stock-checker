@@ -8,12 +8,12 @@ repos:
     rev: v2.2.0
     hooks:
       - id: seed-isort-config
-        args: [--settings-path=fieldstone,--application-directories=fieldstone]
+        args: [--settings-path=ps5-stock-checker,--application-directories=ps5-stock-checker]
   - repo: https://github.com/timothycrosley/isort
     rev: 4.3.21
     hooks:
       - id: isort
-        args: [--settings-path=fieldstone]
+        args: [--settings-path=ps5-stock-checker]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.4.0
     hooks:
@@ -24,4 +24,3 @@ repos:
           - flake8-import-order
           - flake8-quotes
           - flake8-breakpoint
-        args: [--config, fieldstone/setup.cfg]
